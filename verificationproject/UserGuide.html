@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
+<style>
+body{
+text-align:center;
+background-image:linear-gradient(to right,#B2FF59,#CCFF90);
+font-family:'Mulish', sans-serif;
+}
+h2{
+border-bottom:2px solid black;
+margin:0px 300px;
+}
+.container{
+background:#EEEEEE;
+border-radius: 5px;
+border: 1px solid #EEEEEE;
+margin:0px 150px;
+text-align:left;
+padding:0px 2px;
+}
+.container:hover{
+box-shadow:1px 1px 10px black;
+}
+.Auth{
+background:black;
+margin-right:940px;
+color:white;
+}
+</style>
+
+</head>
+<body>
+<h2>USER GUIDE for Securing the API</h2>
+<p>since the MVC project has been setup, kindly add the below code in your API code:</p>
+<p>In your API controller kindly add the line <b>[Authorize]</b> after the namespace is defined, Please see highlighted below</p>
+<div class="container">
+using System;<br>
+using System.Collections.Generic;<br>
+using System.Linq;<br>
+using System.Threading.Tasks;<br>
+using Microsoft.AspNetCore.Authorization;<br>
+using Microsoft.AspNetCore.Mvc;<br>
+using Microsoft.Extensions.Logging;<br>
+<br>
+namespace devNxtSampleApi.Controllers<br>
+{<br>
+    [ApiController]<br>
+    [Route("[controller]")]<br>
+    <p class="Auth">[Authorize]</p>
+    public class WeatherForecastController : ControllerBase<br>
+    {
+</div>
+<p>In your Startup.cs class in the API, in the function <b>public void ConfigureServices(IServiceCollection services)</b> kindly add the below code</p>
+<div class="container">
+services.AddAuthentication(options =><br>
+            {<br>
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;<br>
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;<br>
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;<br>
+            }).AddJwtBearer(options =><br>
+            {<br>
+                options.SaveToken = true;<br>
+                options.RequireHttpsMetadata = false;<br>
+                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()<br>
+                {<br>
+                    ValidateIssuer = true,<br>
+                    ValidateAudience = true,<br>
+                    ValidAudience = "Enter the client web application link",<br>
+                    ValidIssuer = "Enter the client web application link",<br>
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Enter your key"))<br>
+                };<br>
+            });<br>
+</div>
+<p>In the Startup.cs class in the API, in the function <b>public void Configure(IApplicationBuilder app, IWebHostEnvironment env)</b> kindly add the below code after <b>app.UseRouting();</b></p>
+<div class="container">
+app.UseAuthentication();<br>
+app.UseAuthorization();
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+C:\Users\devNXT\Downloads\m-r-master\SimpleCQRS\bin\Debug\SimpleCQRS.dll.config
+C:\Users\devNXT\Downloads\m-r-master\SimpleCQRS\bin\Debug\SimpleCQRS.dll
+C:\Users\devNXT\Downloads\m-r-master\SimpleCQRS\bin\Debug\SimpleCQRS.pdb
+C:\Users\devNXT\Downloads\m-r-master\SimpleCQRS\obj\x86\Debug\SimpleCQRS.csprojAssemblyReference.cache
+C:\Users\devNXT\Downloads\m-r-master\SimpleCQRS\obj\x86\Debug\SimpleCQRS.csproj.CoreCompileInputs.cache
+C:\Users\devNXT\Downloads\m-r-master\SimpleCQRS\obj\x86\Debug\SimpleCQRS.dll
+C:\Users\devNXT\Downloads\m-r-master\SimpleCQRS\obj\x86\Debug\SimpleCQRS.pdb
+C:\Users\devNXTFoundation\devNxtCQRS\SimpleCQRS\bin\Debug\SimpleCQRS.dll.config
+C:\Users\devNXTFoundation\devNxtCQRS\SimpleCQRS\bin\Debug\SimpleCQRS.dll
+C:\Users\devNXTFoundation\devNxtCQRS\SimpleCQRS\bin\Debug\SimpleCQRS.pdb
+C:\Users\devNXTFoundation\devNxtCQRS\SimpleCQRS\obj\x86\Debug\SimpleCQRS.csprojAssemblyReference.cache
+C:\Users\devNXTFoundation\devNxtCQRS\SimpleCQRS\obj\x86\Debug\SimpleCQRS.csproj.CoreCompileInputs.cache
+C:\Users\devNXTFoundation\devNxtCQRS\SimpleCQRS\obj\x86\Debug\SimpleCQRS.dll
+C:\Users\devNXTFoundation\devNxtCQRS\SimpleCQRS\obj\x86\Debug\SimpleCQRS.pdb
